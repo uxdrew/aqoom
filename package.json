@@ -1,0 +1,17 @@
+{
+  "name": "aqoom",
+  "version": "0.1.0",
+  "description": "accumulate loyalty points by living healthy",
+  "main": "index.js",
+  "scripts": {
+    "build": "netlify-lambda build functions",
+    "serve": "concurrently --kill-others \"netlify-lambda serve functions\" \"live-server .\""
+  },
+  "repository": "https://github.com/uxdrew/aqoom.git",
+  "author": "Andrew Harris, Arjun Balaji, Alec Paulson",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "netlify-lambda": "^1.6.3"
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="299px" height="102px" viewBox="0 0 299 102" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Artboard Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#E4E3DE" stroke-width="8" cx="132" cy="40" r="18"></circle>
+        <circle id="Oval-Copy-2" stroke="#E4E3DE" stroke-width="8" cx="82" cy="40" r="18"></circle>
+        <circle id="Oval-Copy" stroke="#E4E3DE" stroke-width="8" cx="182" cy="40" r="18"></circle>
+        <path d="M250,40 C250,30.0588745 241.941125,22 232,22 C222.058875,22 214,30.0588745 214,40" id="Path" stroke="#E4E3DE" stroke-width="8" stroke-linecap="round"></path>
+        <path d="M286,40 C286,30.0588745 277.941125,22 268,22 C258.058875,22 250,30.0588745 250,40" id="Path-Copy" stroke="#E4E3DE" stroke-width="8" stroke-linecap="round"></path>
+        <circle id="Oval-Copy-3" stroke="#E4E3DE" stroke-width="8" cx="32" cy="40" r="18"></circle>
+        <line x1="250" y1="60" x2="250" y2="40" id="Path-3-Copy-3" stroke="#E4E3DE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></line>
+        <line x1="100" y1="80" x2="100" y2="40" id="Path-3" stroke="#E4E3DE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></line>
+        <line x1="50" y1="60" x2="50" y2="40" id="Path-3-Copy" stroke="#E4E3DE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></line>
+        <line x1="50" y1="60" x2="50" y2="40" id="Path-3-Copy-2" stroke="#E4E3DE" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></line>
+    </g>
+</svg>

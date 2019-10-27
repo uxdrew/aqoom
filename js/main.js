@@ -137,7 +137,7 @@
     request.send(data);
     request.onload = function() {
       if (request.readyState == XMLHttpRequest.DONE) {
-        alert(request.responseText);
+        //alert(request.responseText);
         return false;
       }
     };

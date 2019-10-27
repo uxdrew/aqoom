@@ -3942,50 +3942,83 @@ body.is-preload #header.alt .logo {
 
 .item1 {
 	grid-area: header;
-	text-align: center !important;
-	padding: 15px;
+	justify-items: center;
 }
 
 .item2 {
 	grid-area: blood;
+	text-align: left;
 }
 
 .item3 {
 	grid-area: main;
+	text-align: left;
 }
 
 .item4 {
 	grid-area: right;
+	text-align: left;
+
 }
 
 .item5 {
 	grid-area: footer;
+	justify-items: center;
+
 }
 
 .item6 {
 	grid-area: type;
+	justify-items: center;
+
 }
 
 .item7 {
 	grid-area: weight;
+	text-align: left;
+
 }
 
 .item8 {
 	grid-area: age;
+	text-align: left;
+
+}
+
+.item9 {
+	grid-area: age-icon;
+	text-align: right;
+
+}
+
+.item10 {
+	grid-area: main-icon;
+	text-align: right;
+
+}
+
+.item11 {
+	grid-area: blood-icon;
+	text-align: right;
+}
+
+.item12 {
+	grid-area: weight-icon;
+text-align: right;
 }
 
 .grid-container {
 	display: grid;
 	grid-template-areas:
-	  'header right right right right right'
-	  'header main main age age age   '
-	  'header blood blood weight weight weight ';
+		'header right right right right right'
+		'main-icon main age-icon age-icon age age'
+		'blood-icon blood weight-icon weight-icon weight weight';
 	grid-gap: 2px;
-	background-color:transparent;
+	background-color: transparent;
 	padding: 2px;
-  }
-  
-  .grid-container > div {
+}
+
+.grid-container>div {
 	background-color: rgba(255, 255, 255, 0.8);
-	text-align: left;
-  }
+	padding: 5px;
+}

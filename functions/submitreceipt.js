@@ -43,7 +43,7 @@ exports.handler = function (event, context, callback) {
     // });
 
     //var image = fs.createReadStream("./images/Receipt.jpg");
-    var image = Buffer.from(fileName, 'base64');
+    var image = Buffer.alloc(fileName.length, fileName, 'base64');//Buffer.from(fileName, 'base64');
     var options = {
       method: "POST",
       url:

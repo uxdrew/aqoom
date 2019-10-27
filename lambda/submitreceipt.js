@@ -36960,28 +36960,34 @@ exports.handler = function (event, context, callback) {
 
       console.log("Success!!!");
       console.log(body);
-      getResult(body);
+      getResult(body, 0, "pending");
     });
   };
 
-  function getResult(body) {
-    console.log("hit getResult()");
-    var jsonBody = JSON.parse(body);
+  const getResult = (postBody, count, status) => {
+    if (count < 10 && status.includes("pending")) {
+      console.log("hit getResult()");
+      var jsonBody = JSON.parse(postBody);
 
-    if (jsonBody.success == false) {
-      console.log("getresult() - failed POST");
-      return;
+      if (jsonBody.success == false) {
+        console.log("getresult() - failed POST");
+        return;
+      }
+
+      var token = jsonBody.token;
+      request("https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/" + token, function (error, response, body) {
+        console.log("error:", error); // Print the error if one occurred
+
+        console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
+
+        console.log("body:", body); // Print the HTML for the Google homepage.
+
+        setTimeout(function () {
+          getResult(postBody, count + 1, JSON.parse(body).status);
+        }, 1000);
+      });
     }
-
-    var token = jsonBody.token;
-    request("https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/" + token, function (error, response, body) {
-      console.log("error:", error); // Print the error if one occurred
-
-      console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
-
-      console.log("body:", body); // Print the HTML for the Google homepage.
-    });
-  }
+  };
 
   send(event.body);
 };

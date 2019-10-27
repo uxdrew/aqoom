@@ -12,8 +12,8 @@ exports.handler = function (event, context, callback) {
     const fileName = `img${Math.floor(Math.random() * 100000000) +
       1}.png`;
 
-    require("fs").writeFile(fileName, base64Data, "base64", function (err) {
-      processImage(fileName).then(response => {
+    //require("fs").writeFile(fileName, base64Data, "base64", function (err) {
+      processImage(base64Data).then(response => {
         console.log("Promise 3. ", response);
         callback(null, {
           statusCode: 200,
@@ -29,12 +29,12 @@ exports.handler = function (event, context, callback) {
           })
         })
       });
-    });
+    //});
   };
 
   const processImage = fileName => {
     console.log("hit processImage()");
-    console.log(fileName);
+    //console.log(fileName);
 
     // request('http://www.google.com', function (error, response, body) {
     //     console.log('error:', error); // Print the error if one occurred
@@ -43,7 +43,7 @@ exports.handler = function (event, context, callback) {
     // });
 
     //var image = fs.createReadStream("./images/Receipt.jpg");
-    var image = fs.createReadStream(fileName);
+    var image = Buffer.from(fileName, 'base64');
     var options = {
       method: "POST",
       url:

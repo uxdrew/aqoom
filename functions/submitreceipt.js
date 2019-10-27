@@ -1,96 +1,135 @@
 const axios = require("axios");
 var fs = require("fs");
 var request = require("request");
+//var nodefetch = require("node-fetch");
+//const fileType = require('file-type');
 
 // eslint-disable-next-line no-unused-vars
-exports.handler = function(event, context, callback) {
-  console.log("hit handler");
-
-  const send = body => {
-    var base64Data = body.split(",")[1];
-    const fileName = `images/img${Math.floor(Math.random() * 100000000) +
-      1}.png`;
-    require("fs").writeFile(fileName, base64Data, "base64", function(err) {
-      processImage(fileName);
-      console.log(err);
-    });
-
-    callback(null, {
-      statusCode: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers":
-          "Origin, X-Requested-With, Content-Type, Accept"
-      },
-      body: body
-    });
+exports.handler = async function (event, context, callback) {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: `Hello world ${Math.floor(Math.random() * 10)}` })
   };
 
-  const processImage = fileName => {
-    console.log("hit processImage()");
-    console.log(fileName);
+  // let retval;
+  // console.log("hit handler");
 
-    // request('http://www.google.com', function (error, response, body) {
-    //     console.log('error:', error); // Print the error if one occurred
-    //     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-    //     console.log('body:', body); // Print the HTML for the Google homepage.
-    // });
+  // var base64Data = null;//body.split(",")[1];
+  // // const fileName = `img${Math.floor(Math.random() * 100000000) +
+  // //   1}.png`;
+  // //console.log(base64Data.length);
 
-    var image = fs.createReadStream(fileName);
-    var options = {
-      method: "POST",
-      url:
-        "https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/process",
-      headers: {
-        "content-type":
-          "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
-      },
-      formData: {
-        receiptImage: {
-          value: image,
-          options: {
-            filename: "/C:/Users/DTC-ENG/aqoom/images/img14168966.png",
-            contentType: null
-          }
-        },
-        testMode: "true"
-      }
-    };
+  // //require("fs").writeFile(fileName, base64Data, "base64", function (err) {
+  // await processImage(base64Data).then(response => {
+  //   console.log("Promise 3. ", response);
+  //   callback(null, {
+  //     statusCode: 200,
 
-    request(options, function(error, response, body) {
-      console.log("hit request");
-      if (error) {
-        console.log("Error!!!");
-        console.log(error);
-        throw new Error(error);
-      }
-      console.log("Success!!!");
-      console.log(body);
+  //     body: response
+  //   });
+  // }).catch(error => {
+  //   console.log(error);
+  //   callback(null, {
+  //     statusCode: 500,
+  //     body: JSON.stringify({
+  //       message: error
+  //     })
+  //   })
+  // });
 
-      getResult(body);
-    });
-  };
+  // async function processImage(fileName) {
+  //   console.log("hit processImage()");
+  //   //console.log(fileName);
 
-  function getResult(body) {
-    console.log("hit getResult()");
-    var jsonBody = JSON.parse(body);
-    if (jsonBody.success == false) {
-      console.log("getresult() - failed POST");
-      return;
-    }
+  //   // request('http://www.google.com', function (error, response, body) {
+  //   //     console.log('error:', error); // Print the error if one occurred
+  //   //     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  //   //     console.log('body:', body); // Print the HTML for the Google homepage.
+  //   // });
 
-    var token = jsonBody.token;
+  //   //var image = fs.createReadStream("https://aqoom.netlify.com/images/Receipt.jpg");
+  //   //var image = Buffer.alloc(fileName.length, fileName, 'base64');//Buffer.from(fileName, 'base64');
 
-    request(
-      "https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/" +
-        token,
-      function(error, response, body) {
-        console.log("error:", error); // Print the error if one occurred
-        console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
-        console.log("body:", body); // Print the HTML for the Google homepage.
-      }
-    );
-  }
+  //   // fetch('https://aqoom.netlify.com/images/Receipt.jpg')
+  //   // .then(res => res.buffer())
+  //   // .then(buffer => fileType(buffer))
+  //   // .then(type => { /* ... */ });
 
-  send(event.body);
+  //   let image = await axios.get('https://aqoom.netlify.com/images/Receipt.jpg', { responseType: 'arraybuffer' });
+  //   //let returnedB64 = Buffer.from(image.data).toString('base64');
+
+  //   //var image = null;
+  //   // let imgreq = new Promise((resolve, reject) =>
+  //   //   request.get('https://aqoom.netlify.com/images/Receipt.jpg', function (error, response, body) {
+  //   //     if (!error && response.statusCode == 200) {
+  //   //       //image = body;
+  //   //       console.log('body:' + body.length);
+  //   //       return body;
+  //   //     }
+  //   //   }).then((body) => {
+  //   //     image = body;
+  //   console.log('image:' + image.length);
+  //   var options = {
+  //     method: "POST",
+  //     url:
+  //       "https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/process",
+  //     headers: {
+  //       "content-type":
+  //         "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
+  //     },
+  //     formData: {
+  //       receiptImage: {
+  //         value: image,
+  //         options: {
+  //           filename: "img14168966.png",
+  //           contentType: null
+  //         }
+  //       },
+  //       testMode: "true"
+  //     }
+  //   };
+  //   return new Promise(function (resolve, reject) {
+  //     request(options, function (error, response, body) {
+  //       console.log("hit request");
+  //       if (error) {
+  //         console.log("Error!!!");
+  //         console.log(error);
+  //         throw new Error(error);
+  //       }
+  //       getResult(body).then(response => {
+  //         resolve(response);
+  //         console.log("Resolve 2");
+  //         console.log(response);
+  //       });
+  //       console.log("Success!!!");
+  //       console.log(body);
+  //     });
+  //   });
+  // };
+
+  // const getResult = postBody => {
+  //   console.log("hit getResult()");
+  //   var jsonBody = JSON.parse(postBody);
+  //   if (jsonBody.success == false) {
+  //     console.log("getresult() - failed POST");
+  //     return;
+  //   }
+
+  //   var token = jsonBody.token;
+
+  //   return new Promise(function (resolve, reject) {
+  //     console.log("Inside getResult");
+  //     request(
+  //       "https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/" +
+  //       token,
+  //       function (error, response, body) {
+  //         retval = body;
+  //         resolve(body);
+  //         console.log("Resolved 1. ", body);
+  //       }
+  //     );
+  //   });
+  // };
+
+  // send(event.body);
 };

@@ -3,15 +3,13 @@
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  var width = 2048; // We will scale the photo width to this
+  var width = 1024; // We will scale the photo width to this
   var height = 0; // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
 
   var streaming = false;
-
-  const postImageButton = document.querySelector("#post-image");
 
   var video = null;
   var canvas = null;
@@ -46,44 +44,49 @@
         console.error(error);
       });
 
-    video.addEventListener(
-      "canplay",
-      function(ev) {
-        if (!streaming) {
-          height = video.videoHeight / (video.videoWidth / width);
+    // video.addEventListener(
+    //   "canplay",
+    //   function(ev) {
+    //     if (!streaming) {
+    //       height = video.videoHeight / (video.videoWidth / width);
 
-          // Firefox currently has a bug where the height can't be read from
-          // the video, so we will make assumptions if this happens.
+    //       // Firefox currently has a bug where the height can't be read from
+    //       // the video, so we will make assumptions if this happens.
 
-          if (isNaN(height)) {
-            height = width / (4 / 3);
-          }
+    //       if (isNaN(height)) {
+    //         height = width / (4 / 3);
+    //       }
 
-          video.setAttribute("width", width);
-          video.setAttribute("height", height);
-          canvas.setAttribute("width", width);
-          canvas.setAttribute("height", height);
-          streaming = true;
-        }
-      },
-      false
-    );
+    //       video.setAttribute("width", width);
+    //       video.setAttribute("height", height);
+    //       canvas.setAttribute("width", width);
+    //       canvas.setAttribute("height", height);
+    //       streaming = true;
+    //     }
+    //   },
+    //   false
+    // );
 
-    previewbutton.addEventListener(
-      "click",
-      function(ev) {
-        takepicture();
-        ev.preventDefault();
-      },
-      false
-    );
+    // previewbutton.addEventListener(
+    //   "click",
+    //   function(ev) {
+    //     takepicture();
+    //     ev.preventDefault();
+    //     window.location.href = "scan-results.html";
+    //   },
+    //   false
+    // );
 
     postbutton.addEventListener(
       "click",
       function(ev) {
         var img = takepicture();
-        postpicture(img);
         ev.preventDefault();
+        postpicture(img);
+        //ev.preventDefault();
+        setTimeout(function(){window.location.href = "scan-results.html";}, 2000);
+        
+        //return false;
       },
       false
     );
@@ -126,13 +129,14 @@
   function postpicture(img) {
     var request = new XMLHttpRequest();
     request.open("POST", "http://localhost:9000/submitreceipt", true);
-    //request.open("POST", "/.netlify/functions/submitreceipt", true);
+    // request.open("POST", "/.netlify/functions/submitreceipt", true);
     var data = new FormData();
     data.append("image", img);
     request.send(data);
-    request.onreadystatechange = function() {
+    request.onload = function() {
       if (request.readyState == XMLHttpRequest.DONE) {
         alert(request.responseText);
+        return false;
       }
     };
   }

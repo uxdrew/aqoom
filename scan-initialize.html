@@ -1,87 +1,131 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Aqoom - Healthy Rewards for healthy people.</title>
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
+      <link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
 
-<body class="is-preload">
-
+  <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <span class="logo">
+          <a href="index.html"
+            ><img
+              src="images/logo.svg"
+              alt="HealthyRewards logo of pumpkin pimp"/></a
+        ></span>
+        <h1>Image Scan Initialization</h1>
+      </header>
 
-        <!-- Header -->
-        <header id="header" class="alt">
-            <span class="logo"> <a href="index.html"><img src="images/logo.svg" alt="HealthyRewards logo of pumpkin pimp" /></a></span>
-            <h1>Image Scan Initialization</h1>
-        </header>
+      <!-- Main -->
+      <div id="main">
+        <!-- Introduction -->
+        <section id="intro" class="main">
+          <div class="spotlight">
+            <div class="content">
+              <header class="major">
+                <h2>Receipt Scanner</h2>
+              </header>
 
-        <!-- Main -->
-        <div id="main">
+              <video id="capture" autoplay playsinline></video>
+              <canvas style="display:none" id="canvas"></canvas>
+              <img
+                style="display:none"
+                id="photo"
+                alt="The screen capture will appear in this box."
+              />
+              <br />
+              <ul class="actions special">
+                <li>
+                  <a class="button primary" id="postimage">
+                    Capture Image
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-            <!-- Introduction -->
-            <section id="intro" class="main">
-                <div class="spotlight">
-                    <div class="content">
-                        <header class="major">
-                            <h2>Receipt Scanner</h2>
-                        </header>
+        <!-- Get Started -->
+        <section id="cta" class="main special">
+          <header class="major">
+            <h2>Not sure where to start?</h2>
+            <p>
+              Don't worry. If you don't have a receipt ready to scan quite yet.
+              Learn how it all works below.
+            </p>
+          </header>
+          <footer class="major">
+            <ul class="actions special">
+              <li>
+                <a href="account-create.html" class="button primary"
+                  >Create Account</a
+                >
+              </li>
+              <li><a href="learn-more.html" class="button">Learn More</a></li>
+            </ul>
+          </footer>
+        </section>
+      </div>
 
-                        <div id="capture" class="video"></div>
-                        <br>
-                        <ul class="actions special">
-                            <li><a href="index.html" class="button primary" id="post-image">Capture Image</a></li>
-                            <li><a href="scan-results.html" class="button">Mock Scan Results</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- Get Started -->
-            <section id="cta" class="main special">
-                <header class="major">
-                    <h2>Not sure where to start?</h2>
-                    <p>Don't worry. If you don't have a receipt ready to scan quite yet. Learn how it all works below. </p>
-                </header>
-                <footer class="major">
-                    <ul class="actions special">
-                        <li><a href="account-create.html" class="button primary">Create Account</a></li>
-                        <li><a href="learn-more.html" class="button">Learn More</a></li>
-                    </ul>
-                </footer>
-            </section>
-
-        </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-                <section>
-                    <h2>Putting Health First</h2>
-                    <p>Make sure your data is secure and keep all your medical records and insurance in one convenient
-                        place. </p>
-                </section>
-                <section>
-                    <div>
-                    <p>Made with <i class="fas fa-heart"></i> at HACK/HLTH 2019 by <span style="font-size: 14px; font-weight: bolder;">Team n<sup>3</sup></p>
-                    </div>
-                </dl>
-                    <ul class="icons">
-                        <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-                    </ul>
-                </section>
-                <p class="copyright">&copy; Aqoom - HealthyRewards <a href="#"></a></p>
-            </footer>
-
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2>Putting Health First</h2>
+          <p>
+            Make sure your data is secure and keep all your medical records and
+            insurance in one convenient place.
+          </p>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <dl class="alt">
+            <dt>Address</dt>
+            <dd>
+              Made with <i class="fas fa-heart"></i> in Denver by
+              <span style="font-size: 14px; font-weight: bolder;"
+                >Team n<sup>3</sup></span
+              >
+            </dd>
+            <dt>Email</dt>
+            <dd><a href="#">hello@uxdrew.io</a></dd>
+          </dl>
+          <ul class="icons">
+            <li>
+              <a href="#" class="icon brands fa-twitter alt"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-facebook-f alt"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-instagram alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+        </section>
+        <p class="copyright">&copy; Aqoom - HealthyRewards <a href="#"></a></p>
+      </footer>
     </div>
 
     <!-- Scripts -->
@@ -92,12 +136,17 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="js/main.js"></script> <!-- from arjun -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
-        integrity="sha256-WVsM3xrcqyuFNF3W1qtIKbHFsD0977nDQA8DCMp1zCw=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"
-        integrity="sha256-2/3R3NV5zryj0fDjD3cDh+SNiWQ/TJiMVZzAo5FrhiU=" crossorigin="anonymous"></script>
-
-</body>
-
+    <script src="js/main.js"></script>
+    <!-- from arjun -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
+      integrity="sha256-WVsM3xrcqyuFNF3W1qtIKbHFsD0977nDQA8DCMp1zCw="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"
+      integrity="sha256-2/3R3NV5zryj0fDjD3cDh+SNiWQ/TJiMVZzAo5FrhiU="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

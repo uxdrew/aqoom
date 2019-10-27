@@ -3,10 +3,12 @@
 
 <head>
     <title>Aqoom - Healthy Rewards for healthy people.</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/form.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
 
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -19,70 +21,119 @@
 
         <!-- Header -->
         <header id="header" class="alt">
-            <span class="logo"> <a href="index.html"><img src="images/logo.svg"
-                        alt="HealthyRewards logo of pumpkin pimp" /></a></span>
+            <span class="logo"> <a href="index.html"><img src="images/logo.svg" alt="HealthyRewards logo of pumpkin pimp" /></a></span>
             <p>accumulate more happiness by living healthy</p>
             <span> <a href="scan-initialize.html" class="icon" style="padding: 7px; cursor: pointer;" ><i class="fas fa-camera fa-2x"></i></a></span>
-
         </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#intro" class="active hide">Introduction</a></li>
+                <li><a href="#first" class="hide">How it works</a></li>
+                <li><a href="#second" class="hide">Health data</a></li>
+                <li><a href="#cta" class="hide">Get started</a></li>
+                <li><a href="account.html">Account settings</a></li>
+            </ul>
+        </nav>
 
         <!-- Main -->
         <div id="main">
 
             <!-- Introduction -->
             <section id="intro" class="main">
-                <div class="spotlight">
+                <div class="spotlight" >
                     <div class="content">
                         <header class="major">
-                            <h2>Get ready to join!</h2>
+                            <h2>Welcome!</h2>
                         </header>
-
-                        <div class="container">
-                        <input type='checkbox' id='form-switch'>
-                        <form id='login-form' action="" method='post'>
-                            <input type="text" placeholder="Username" required>
-                            <input type="password" placeholder="Password" required>
-                            <!-- <button type='submit' class="button primary">Login</button> -->
-                            <a href="dashboard-main.html" class="button primary" type="submit" style="margin-top: 10px;">Login</a>
-                            <br><br>
-                            <label for='form-switch'><span style="text-decoration: underline; color: #a89cc8">Don't have an account? Sign up now...</span></label>
-                        </form>
-                        <form id='register-form' action="" method='post'>
-                            <input type="text" placeholder="Username" required>
-                            <input type="email" placeholder="Email" required>
-                            <input type="password" placeholder="Password" required>
-                            <input type="password" placeholder="Re Password" required>
-                            <!-- <button type='submit' class="button primary">Register</button> -->
-                            <a href="dashboard-main.html" class="button primary" type="submit" style="margin-top: 10px">Register</a>
-
-                            <br><br>
-                            <label for='form-switch'><span style="text-decoration: underline; color: #a89cc8"> Already have an account? Sign in now...</span></label>
-                        </form>
-                    </div>
-
-
-
+                        <p>Healthy living ain't always easy. Not all of us can run 3 miles a day and lay off the cold beers. Our aim isn't to 
+                            make you stop doing what you love, it is to help make you aware of your habits - and in turn help you accumulate
+                            points you can turn into cash and also help give your insurance provider, general practicioner, health worker, and family,
+                            insight into your newly found healthy habits. 
+                        </p>
+                        <ul class="actions special">
+                            <li><a href="account-create.html" class="button primary" id="post-image">Create Account</a></li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-        </div>
+            <!-- First Section -->
+            <section id="first" class="main special">
+                <header class="major">
+                    <h2>How it works</h2>
+                </header>
+                <ul class="features">
+                    <li>
+                        <span class="icon solid major style1 fa-receipt"></span>
+                        <h3>Scan</h3>
+                        <p>Accumulate points when you scan and match qualifying food items.</p>
+                    </li>
+                    <li>
+                        <span class="icon major style3 fa-walking"></span>
+                        <h3>Move</h3>
+                        <p>Pair with your wearable and let the magic happen. </p>
+                    </li>
+                    <li>
+                        <span class="icon major style5 fa-share-alt"></span>
+                        <h3>Share</h3>
+                        <p>Keep health care providers and insurance engaged.</p>
+                    </li>
+                </ul>
+                <footer class="major">
+                    <ul class="actions special">
+                        <li><a href="learn-more.html" class="button">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
 
+            <!-- Second Section -->
+            <section id="second" class="main special">
+                <header class="major">
+                    <h2>Health data</h2>
+                    <p>Health data includes clinical metrics along with environmental, socioeconomic, and behavioral information pertinent to health and wellness.</p>
+                </header>
+                <img src="images/bike.png">
+                <p class="content"></p>
+                <footer class="major">
+                    <ul class="actions special">
+                        <li><a href="learn-more.html" class="button">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+            <!-- Get Started -->
+            <section id="cta" class="main special">
+                <header class="major">
+                        <img src="images/microscope.png" width="50">
+                    <h2>Get started</h2>
+                    <p>Set up your account and link your wearable, insurance, and medical data to let our engines go to work and help you find and share 
+                        medical data safely and securely. 
+                    </p>
+                </header>
+                <footer class="major">
+                    <ul class="actions special">
+                        <li><a href="account-create.html" class="button primary">Sign Up</a></li>
+                        <li><a href="learn-more.html" class="button">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
+
+        </div>
+        <br>
         <!-- Footer -->
         <footer id="footer">
                 <section>
                     <h2>Putting Health First</h2>
-                    <p>Make sure your data is secure and keep all your medical records and insurance in one convenient place. </p>
+                    <p>Make sure your data is secure and keep all your medical records and insurance in one convenient
+                        place. </p>
                 </section>
                 <section>
-                    <h2>Contact</h2>
-                    <dl class="alt">
-                        <dt>Address</dt>
-                        <dd>Made with <i class="fas fa-heart"></i> in Denver by <span
-                                style="font-size: 14px; font-weight: bolder;">Team n<sup>3</sup></span></dd>
-                        <dt>Email</dt>
-                        <dd><a href="#">hello@uxdrew.io</a></dd>
-                    </dl>
+                    <div>
+                    <p>Made with <i class="fas fa-heart"></i> at HACK/HLTH 2019 by <span style="font-size: 14px; font-weight: bolder;">Team n<sup>3</sup></p>
+                    </div>
+                </dl>
                     <ul class="icons">
                         <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
                         <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
@@ -103,7 +154,6 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/form.js"></script>
     <script src="js/main.js"></script> <!-- from arjun -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
         integrity="sha256-WVsM3xrcqyuFNF3W1qtIKbHFsD0977nDQA8DCMp1zCw=" crossorigin="anonymous"></script>

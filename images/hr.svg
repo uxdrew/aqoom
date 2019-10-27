@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="369px" height="296px" viewBox="0 0 369 296" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Artboard Copy 9</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy-9" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="Week" font-family="TitilliumWeb-Regular, Titillium Web" font-size="18" font-weight="normal" letter-spacing="0.225" fill="#535759">
+            <tspan x="18" y="35">Week</tspan>
+        </text>
+        <text id="Month" font-family="TitilliumWeb-Regular, Titillium Web" font-size="18" font-weight="normal" letter-spacing="0.225" fill="#535759">
+            <tspan x="82" y="35">Month</tspan>
+        </text>
+        <text id="Year" font-family="TitilliumWeb-Regular, Titillium Web" font-size="18" font-weight="normal" letter-spacing="0.225" fill="#535759">
+            <tspan x="154" y="35">Year</tspan>
+        </text>
+        <line x1="18" y1="42" x2="62" y2="42" id="Path-2" stroke="#979797"></line>
+        <g id="Line-chart" transform="translate(-1.000000, 67.000000)">
+            <rect id="Rectangle" x="4" y="0" width="363" height="229"></rect>
+            <path d="M4,73.253112 C4,73.253112 10,158.921162 16,158.921162 C22,158.921162 22,185.93361 28,185.93361 C34,185.93361 34,54.7302905 40,54.7302905 C46,54.7302905 46,204.456432 52,204.456432 C58,204.456432 58,68.6224066 64,68.6224066 C70,68.6224066 70,155.834025 76,155.834025 C82,155.834025 82,127.278008 88,127.278008 C94,127.278008 94,43.153527 100,43.153527 C106,43.153527 106,201.369295 112,201.369295 C118,201.369295 118,167.410788 124,167.410788 C131,167.410788 131,118.788382 137,118.788382 C143,118.788382 143,197.510373 149,197.510373 C155,197.510373 155,164.323651 161,164.323651 C167,164.323651 167,114.929461 173,114.929461 C179,114.929461 179,20 185,20 C191,20 191,70.1659751 197,70.1659751 C203,70.1659751 203,66.3070539 209,66.3070539 C215,66.3070539 215,145.80083 221,145.80083 C227,145.80083 227,118.788382 233,118.788382 C239,118.788382 239,46.2406639 245,46.2406639 C252,46.2406639 252,94.8630705 258,94.8630705 C264,94.8630705 264,38.5228216 270,38.5228216 C276,38.5228216 276,206 282,206 C288,206 288,38.5228216 294,38.5228216 C300,38.5228216 300,41.6099585 306,41.6099585 C312,41.6099585 312,135.767635 318,135.767635 C324,135.767635 324,108.755187 330,108.755187 C336,108.755187 336,41.6099585 342,41.6099585 C348,41.6099585 348,110.298755 354,110.298755 C360,110.298755 367,143.485477 367,143.485477" id="Line_1" stroke="#DD6666" stroke-width="2"></path>
+            <ellipse id="Dot_11" fill="#DD6666" cx="4" cy="73" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_12" fill="#DD6666" cx="16" cy="159" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_13" fill="#DD6666" cx="28" cy="186" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_14" fill="#DD6666" cx="40" cy="54" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_15" fill="#DD6666" cx="52" cy="204" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_16" fill="#DD6666" cx="64" cy="68" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_17" fill="#DD6666" cx="76" cy="156" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_18" fill="#DD6666" cx="88" cy="127" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_19" fill="#DD6666" cx="100" cy="43" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_110" fill="#DD6666" cx="112" cy="201" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_111" fill="#DD6666" cx="124" cy="167" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_112" fill="#DD6666" cx="137" cy="118" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_113" fill="#DD6666" cx="149" cy="197" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_114" fill="#DD6666" cx="161" cy="164" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_115" fill="#DD6666" cx="173" cy="115" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_116" fill="#DD6666" cx="185" cy="19" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_117" fill="#DD6666" cx="197" cy="70" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_118" fill="#DD6666" cx="209" cy="66" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_119" fill="#DD6666" cx="221" cy="145" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_120" fill="#DD6666" cx="233" cy="118" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_121" fill="#DD6666" cx="245" cy="46" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_122" fill="#DD6666" cx="258" cy="94" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_123" fill="#DD6666" cx="270" cy="38" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_124" fill="#DD6666" cx="282" cy="206" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_125" fill="#DD6666" cx="294" cy="38" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_126" fill="#DD6666" cx="306" cy="41" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_127" fill="#DD6666" cx="318" cy="135" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_128" fill="#DD6666" cx="330" cy="108" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_129" fill="#DD6666" cx="342" cy="41" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_130" fill="#DD6666" cx="354" cy="110" rx="4" ry="3"></ellipse>
+            <ellipse id="Dot_131" fill="#DD6666" cx="367" cy="143" rx="4" ry="3"></ellipse>
+        </g>
+    </g>
+</svg>

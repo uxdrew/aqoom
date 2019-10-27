@@ -8,6 +8,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/form.css" />
+
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -22,16 +24,9 @@
             <span class="logo"> <a href="index.html"><img src="images/logo.svg"
                         alt="HealthyRewards logo of pumpkin pimp" /></a></span>
             <p>accumulate more happiness by living healthy</p>
-            <span> <a href="scan-initialize.html" class="icon" style="padding: 7px; cursor: pointer;"><i
-                        class="fas fa-camera fa-2x"></i></a></span>
-        </header>
+            <span> <a href="scan-initialize.html" class="icon" style="padding: 7px; cursor: pointer;" ><i class="fas fa-camera fa-2x"></i></a></span>
 
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li><a href="account.html">Account settings</a></li>
-            </ul>
-        </nav>
+        </header>
 
         <!-- Main -->
         <div id="main">
@@ -41,67 +36,34 @@
                 <div class="spotlight">
                     <div class="content">
                         <header class="major">
-                            <h2>Dashboard</h2>
+                            <h2>Get ready to join!</h2>
                         </header>
 
+                        <div class="container">
+                        <input type='checkbox' id='form-switch'>
+                        <form id='login-form' action="" method='post'>
+                            <input type="text" placeholder="Username" required>
+                            <input type="password" placeholder="Password" required>
+                            <!-- <button type='submit' class="button primary">Login</button> -->
+                            <a href="dashboard-main.html" class="button primary" type="submit" style="margin-top: 10px;">Login</a>
+                            <br><br>
+                            <label for='form-switch'><span style="text-decoration: underline; color: #a89cc8">Don't have an account? Sign up now...</span></label>
+                        </form>
+                        <form id='register-form' action="" method='post'>
+                            <input type="text" placeholder="Username" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="password" placeholder="Password" required>
+                            <input type="password" placeholder="Re Password" required>
+                            <!-- <button type='submit' class="button primary">Register</button> -->
+                            <a href="dashboard-main.html" class="button primary" type="submit" style="margin-top: 10px">Register</a>
 
-                        <div class="grid-container">
-                            <div class="item4">
-                                <span>Harris, Drew</span><br>
-                                <span style="font-size: 12px;">1234 Any Lane, Denver CO 80121</span>
-                                <hr style="margin-top:3px; margin-bottom: 3px">
-                            </div>
-
-                            <div class="item1"><img src="images/avatar.png" width="75%"></div>
-
-
-
-                        </div>
-
-                        <table class="table">
-                            <tr>
-                                <td>
-                                    <i class="fas fa-tint"
-                                        style="text-align: center; font-size: 21px; padding: 10px; color: #614F94"></i>
-                                    <span style="font-size: 24px"> B -</span>
-                                </td>
-                                <td><i class="fas fa-calendar-week"
-                                        style="font-size: 21px; padding: 10px; color: #614F94"></i> <span
-                                        style="font-size: 24px"> 36</span></td>
-                                <td><i class="fas fa-weight"
-                                        style="text-align: center; font-size: 21px; padding: 10px; color: #614F94"></i>
-                                    <span style="font-size: 24px"> 81</span></td>
-                                <td><i class="fas fa-ruler-vertical"
-                                        style="font-size: 21px; padding: 10px; color: #614F94"></i> <span
-                                        style="font-size: 24px">178</span></td>
-                            </tr>
-                        </table>
-
+                            <br><br>
+                            <label for='form-switch'><span style="text-decoration: underline; color: #a89cc8"> Already have an account? Sign in now...</span></label>
+                        </form>
                     </div>
-                </div>
-            </section>
 
 
-            <!-- Introduction -->
-            <section id="intro" class="main" style="background-color: rgba(97, 79, 148, 0.10);">
-                <div class="spotlight">
-                    <div class="content">
-                        <header class="major">
-                            <h2>Heart Rate</h2>
-                        </header>
-                        <img src="images/hr.svg" width="100%">
-                    </div>
-                </div>
-            </section>
 
-            <!-- Introduction -->
-            <section id="intro" class="main">
-                <div class="spotlight">
-                    <div class="content">
-                        <header class="major">
-                            <h2>Activity</h2>
-                        </header>
-                        <img src="images/bar-graph.svg" width="100%">
                     </div>
                 </div>
             </section>
@@ -140,6 +102,8 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="js/main.js"></script> <!-- from arjun -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
         integrity="sha256-WVsM3xrcqyuFNF3W1qtIKbHFsD0977nDQA8DCMp1zCw=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"

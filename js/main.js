@@ -11,8 +11,6 @@
 
   var streaming = false;
 
-  const postImageButton = document.querySelector("#post-image");
-
   var video = null;
   var canvas = null;
   var photo = null;
@@ -69,14 +67,15 @@
       false
     );
 
-    previewbutton.addEventListener(
-      "click",
-      function(ev) {
-        takepicture();
-        ev.preventDefault();
-      },
-      false
-    );
+    // previewbutton.addEventListener(
+    //   "click",
+    //   function(ev) {
+    //     takepicture();
+    //     ev.preventDefault();
+    //     window.location.href = "scan-results.html";
+    //   },
+    //   false
+    // );
 
     postbutton.addEventListener(
       "click",
@@ -84,6 +83,7 @@
         var img = takepicture();
         postpicture(img);
         ev.preventDefault();
+        window.location.href = "scan-results.html";
       },
       false
     );

@@ -36902,12 +36902,13 @@ var request = __webpack_require__(/*! request */ "../node_modules/request/index.
 
 exports.handler = function (event, context, callback) {
   console.log("hit handler");
-  processImage();
 
   const send = body => {
     var base64Data = body.split(",")[1];
+    const fileName = `images/img${Math.floor(Math.random() * 100000000) + 1}.png`;
 
-    __webpack_require__(/*! fs */ "fs").writeFile(`images/img${Math.floor(Math.random() * 100000000) + 1}.png`, base64Data, "base64", function (err) {
+    __webpack_require__(/*! fs */ "fs").writeFile(fileName, base64Data, "base64", function (err) {
+      processImage(fileName);
       console.log(err);
     });
 
@@ -36918,41 +36919,36 @@ exports.handler = function (event, context, callback) {
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
       },
       body: body
-    }); // ba64.writeImage(
-    //   `images/img${Math.floor(Math.random() * 100000000) + 1}`,
-    //   data_url,
-    //   function(err) {
-    //     if (err) throw err;
-    //   }
+    });
   };
 
-  function processImage() {
-    console.log("hit processImage()"); // request('http://www.google.com', function (error, response, body) {
+  const processImage = fileName => {
+    console.log("hit processImage()");
+    console.log(fileName); // request('http://www.google.com', function (error, response, body) {
     //     console.log('error:', error); // Print the error if one occurred
     //     console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
     //     console.log('body:', body); // Print the HTML for the Google homepage.
     // });
 
-    var image = fs.createReadStream("C:/Users/DTC-ENG/aqoom/images/img14168966.png");
-    console.log(image);
+    var image = fs.createReadStream("C:/Users/DTC-ENG/aqoom/images/img10512229.png"); // var image = fs.createReadStream(fileName);
+
     var options = {
-      method: 'POST',
-      url: 'https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/process',
+      method: "POST",
+      url: "https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/process",
       headers: {
-        'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
       },
       formData: {
         receiptImage: {
           value: image,
           options: {
-            filename: '/C:/Users/DTC-ENG/aqoom/images/img14168966.png',
+            filename: "/C:/Users/DTC-ENG/aqoom/images/img14168966.png",
             contentType: null
           }
         },
-        testMode: 'true'
+        testMode: "true"
       }
     };
-    console.log("hit processImage() 2");
     request(options, function (error, response, body) {
       console.log("hit request");
 
@@ -36966,9 +36962,7 @@ exports.handler = function (event, context, callback) {
       console.log(body);
       getResult(body);
     });
-  }
-
-  ;
+  };
 
   function getResult(body) {
     console.log("hit getResult()");
@@ -36980,16 +36974,15 @@ exports.handler = function (event, context, callback) {
     }
 
     var token = jsonBody.token;
-    request('https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/' + token, function (error, response, body) {
-      console.log('error:', error); // Print the error if one occurred
+    request("https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/" + token, function (error, response, body) {
+      console.log("error:", error); // Print the error if one occurred
 
-      console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+      console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
 
-      console.log('body:', body); // Print the HTML for the Google homepage.
+      console.log("body:", body); // Print the HTML for the Google homepage.
     });
   }
 
-  ;
   send(event.body);
 };
 

@@ -3939,7 +3939,6 @@ body.is-preload #header.alt .logo {
 
 }
 
-
 .item1 {
 	grid-area: header;
 	justify-items: center;
@@ -3958,43 +3957,36 @@ body.is-preload #header.alt .logo {
 .item4 {
 	grid-area: right;
 	text-align: left;
-
 }
 
 .item5 {
 	grid-area: footer;
 	justify-items: center;
-
 }
 
 .item6 {
 	grid-area: type;
 	justify-items: center;
-
 }
 
 .item7 {
 	grid-area: weight;
 	text-align: left;
-
 }
 
 .item8 {
 	grid-area: age;
 	text-align: left;
-
 }
 
 .item9 {
 	grid-area: age-icon;
 	text-align: right;
-
 }
 
 .item10 {
 	grid-area: main-icon;
 	text-align: right;
-
 }
 
 .item11 {
@@ -4004,7 +3996,7 @@ body.is-preload #header.alt .logo {
 
 .item12 {
 	grid-area: weight-icon;
-text-align: right;
+	text-align: right;
 }
 
 .grid-container {

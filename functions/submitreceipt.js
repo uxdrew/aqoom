@@ -12,20 +12,20 @@ exports.handler = function(event, context, callback) {
     const fileName = `images/img${Math.floor(Math.random() * 100000000) +
       1}.png`;
 
-    require("fs").writeFile(fileName, base64Data, "base64", function(err) {
-      processImage(fileName).then(response => {
-        console.log("Promise 3. ", response);
-        callback(null, {
-          statusCode: 200,
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers":
-              "Origin, X-Requested-With, Content-Type, Accept"
-          },
-          body: response
-        });
+    //require("fs").writeFile(fileName, base64Data, "base64", function(err) {
+    processImage(fileName).then(response => {
+      console.log("Promise 3. ", response);
+      callback(null, {
+        statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers":
+            "Origin, X-Requested-With, Content-Type, Accept"
+        },
+        body: response
       });
     });
+    //});
   };
 
   const processImage = fileName => {
@@ -67,26 +67,19 @@ exports.handler = function(event, context, callback) {
           console.log(error);
           throw new Error(error);
         }
-        getResult(body).then(response => {
-          resolve(response);
-          console.log("Resolve 2");
-          console.log(response);
-        });
-        console.log("Success!!!");
-        console.log(body);
+        resolve(body);
       });
     });
   };
 
-  const getResult = postBody => {
-    console.log("hit getResult()");
-    var jsonBody = JSON.parse(postBody);
-    if (jsonBody.success == false) {
-      console.log("getresult() - failed POST");
-      return;
-    }
+  //   getResult(body).then(response => {
+  //     resolve(response);
+  //     console.log("Resolve 2");
+  //     console.log(response);
+  //   });
 
-    var token = jsonBody.token;
+  const getResult = token => {
+    console.log("hit getResult()");
 
     return new Promise(function(resolve, reject) {
       console.log("Inside getResult");

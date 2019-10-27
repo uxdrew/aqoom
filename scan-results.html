@@ -1,108 +1,125 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>HealthyRewards</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
+      <link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <script src="js/results.js"></script>
+  </head>
 
-<body class="is-preload">
-
+  <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <span class="logo">
+          <a href="index.html"
+            ><img
+              src="images/logo.svg"
+              alt="HealthyRewards logo of pumpkin pimp"/></a
+        ></span>
+        <h1>Recipt Scan Results</h1>
+      </header>
 
-        <!-- Header -->
-        <header id="header" class="alt">
-            <span class="logo"> <a href="index.html"><img src="images/logo.svg"
-                        alt="HealthyRewards logo of pumpkin pimp" /></a></span>
-            <h1>Recipt Scan Results</h1>
-        </header>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li>
+            <a href="scan-initialize.html"
+              ><i class="fas fa-angle-left" style="color:#999"></i> Rescan
+              Receipt</a
+            >
+          </li>
+        </ul>
+      </nav>
 
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li><a href="scan-initialize.html"><i class="fas fa-angle-left" style="color:#999"></i> Rescan Receipt</a></li>
-            </ul>
-        </nav>
+      <!-- Main -->
+      <div id="main">
+        <!-- Introduction -->
+        <section id="intro" class="main">
+          <div class="spotlight">
+            <div class="content">
+              <header class="major">
+                <h2>Scan Results</h2>
+              </header>
+              <h4>Current</h4>
+              <p align="right">
+                Total: <span style="font-size: 24px;">5 pts</span>
+              </p>
+              <table
+                data-role="table"
+                id="movie-table-custom"
+                data-mode="reflow"
+                class="movie-list table-stroke"
+              ></table>
 
-        <!-- Main -->
-        <div id="main">
+              <ul class="actions">
+                <li><a href="#" class="button primary" id="">Accept</a></li>
+                <li>
+                  <a href="#" class="button primary" id=""
+                    >Add points to loyalty card</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
 
-            <!-- Introduction -->
-            <section id="intro" class="main">
-                <div class="spotlight">
-                    <div class="content">
-                        <header class="major">
-                            <h2>Scan Results</h2>
-                        </header>
-                        <h4>Current</h4>
-                        <p align="right">Total: <span style="font-size: 24px;">5 pts</span></p>
-                        <table data-role="table" id="movie-table-custom" data-mode="reflow" class="movie-list table-stroke">
-
-                            <tr>
-                                <td align="left">nasty ass hot pocket<p style="font-size: 12px;">frozen food</p>
-                                </td>
-                                <td>FAIL</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
-                            <tr>
-                                <td align="left">organic apple<p style="font-size: 12px;">produce</p>
-                                </td>
-                                <td>PASS</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
-                            <tr>
-                                <td align="left">proten chips - sour cream and onion<p style="font-size: 12px;">keto</p>
-                                </td>
-                                <td>PASS</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
-
-                        </table>
-
-                        <ul class="actions">
-                                <li><a href="#" class="button primary" id="">Accept</a></li>
-                                <li><a href="#" class="button primary" id="">Add points to loyalty card</a></li>
-
-                                                  </ul>
-
-
-                    </div>
-                </div>
-            </section>
-
-
-        </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-                <section>
-                    <h2>Putting Health First</h2>
-                    <p>Make sure your data is secure and keep all your medical records and insurance in one convenient place. </p>
-                </section>
-                <section>
-                    <h2>Contact</h2>
-                    <dl class="alt">
-                        <dt>Address</dt>
-                        <dd>Made with <i class="fas fa-heart"></i> in Denver by <span
-                                style="font-size: 14px; font-weight: bolder;">Team n<sup>3</sup></span></dd>
-                        <dt>Email</dt>
-                        <dd><a href="#">hello@uxdrew.io</a></dd>
-                    </dl>
-                    <ul class="icons">
-                        <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-                    </ul>
-                </section>
-                <p class="copyright">&copy; Aqoom - HealthyRewards <a href="#"></a></p>
-            </footer>
-
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2>Putting Health First</h2>
+          <p>
+            Make sure your data is secure and keep all your medical records and
+            insurance in one convenient place.
+          </p>
+        </section>
+        <section>
+          <h2>Contact</h2>
+          <dl class="alt">
+            <dt>Address</dt>
+            <dd>
+              Made with <i class="fas fa-heart"></i> in Denver by
+              <span style="font-size: 14px; font-weight: bolder;"
+                >Team n<sup>3</sup></span
+              >
+            </dd>
+            <dt>Email</dt>
+            <dd><a href="#">hello@uxdrew.io</a></dd>
+          </dl>
+          <ul class="icons">
+            <li>
+              <a href="#" class="icon brands fa-twitter alt"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-facebook-f alt"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-instagram alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+        </section>
+        <p class="copyright">&copy; Aqoom - HealthyRewards <a href="#"></a></p>
+      </footer>
     </div>
 
     <!-- Scripts -->
@@ -113,9 +130,7 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="js/main.js"></script> <!-- from arjun -->
-
-
-</body>
-
+    <script src="js/main.js"></script>
+    <!-- from arjun -->
+  </body>
 </html>

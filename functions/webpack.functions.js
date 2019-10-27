@@ -1,6 +1,6 @@
 module.exports = {
-    mode: "development",
-    devtool: 'source-map',
-    optimization: { minimize: false }
+    //mode: "development",
+    //devtool: 'source-map',
+    //optimization: { minimize: false }
   }
   

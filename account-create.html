@@ -2,10 +2,12 @@
 <html>
 
 <head>
-    <title>HealthyRewards</title>
+    <title>Aqoom - Healthy Rewards for healthy people.</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/form.css" />
+
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -19,15 +21,10 @@
         <header id="header" class="alt">
             <span class="logo"> <a href="index.html"><img src="images/logo.svg"
                         alt="HealthyRewards logo of pumpkin pimp" /></a></span>
-            <h1>Recipt Scan Results</h1>
-        </header>
+            <p>accumulate more happiness by living healthy</p>
+            <span> <a href="scan-initialize.html" class="icon" style="padding: 7px; cursor: pointer;" ><i class="fas fa-camera fa-2x"></i></a></span>
 
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li><a href="scan-initialize.html"><i class="fas fa-angle-left" style="color:#999"></i> Rescan Receipt</a></li>
-            </ul>
-        </nav>
+        </header>
 
         <!-- Main -->
         <div id="main">
@@ -37,44 +34,37 @@
                 <div class="spotlight">
                     <div class="content">
                         <header class="major">
-                            <h2>Scan Results</h2>
+                            <h2>Get ready to join!</h2>
                         </header>
-                        <h4>Current</h4>
-                        <p align="right">Total: <span style="font-size: 24px;">5 pts</span></p>
-                        <table data-role="table" id="movie-table-custom" data-mode="reflow" class="movie-list table-stroke">
 
-                            <tr>
-                                <td align="left">nasty ass hot pocket<p style="font-size: 12px;">frozen food</p>
-                                </td>
-                                <td>FAIL</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
-                            <tr>
-                                <td align="left">organic apple<p style="font-size: 12px;">produce</p>
-                                </td>
-                                <td>PASS</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
-                            <tr>
-                                <td align="left">proten chips - sour cream and onion<p style="font-size: 12px;">keto</p>
-                                </td>
-                                <td>PASS</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
+                        <div class="container">
+                        <input type='checkbox' id='form-switch'>
+                        <form id='login-form' action="" method='post'>
+                            <input type="text" placeholder="Username" required>
+                            <input type="password" placeholder="Password" required>
+                            <!-- <button type='submit' class="button primary">Login</button> -->
+                            <a href="dashboard-main.html" class="button primary" type="submit" style="margin-top: 10px;">Login</a>
+                            <br><br>
+                            <label for='form-switch'><span style="text-decoration: underline; color: #a89cc8">Don't have an account? Sign up now...</span></label>
+                        </form>
+                        <form id='register-form' action="" method='post'>
+                            <input type="text" placeholder="Username" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="password" placeholder="Password" required>
+                            <input type="password" placeholder="Re Password" required>
+                            <!-- <button type='submit' class="button primary">Register</button> -->
+                            <a href="dashboard-main.html" class="button primary" type="submit" style="margin-top: 10px">Register</a>
 
-                        </table>
+                            <br><br>
+                            <label for='form-switch'><span style="text-decoration: underline; color: #a89cc8"> Already have an account? Sign in now...</span></label>
+                        </form>
+                    </div>
 
-                        <ul class="actions">
-                                <li><a href="#" class="button primary" id="">Accept</a></li>
-                                <li><a href="#" class="button primary" id="">Add points to loyalty card</a></li>
-
-                                                  </ul>
 
 
                     </div>
                 </div>
             </section>
-
 
         </div>
 
@@ -113,8 +103,12 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/form.js"></script>
     <script src="js/main.js"></script> <!-- from arjun -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
+        integrity="sha256-WVsM3xrcqyuFNF3W1qtIKbHFsD0977nDQA8DCMp1zCw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"
+        integrity="sha256-2/3R3NV5zryj0fDjD3cDh+SNiWQ/TJiMVZzAo5FrhiU=" crossorigin="anonymous"></script>
 
 </body>
 

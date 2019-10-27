@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="369px" height="296px" viewBox="0 0 369 296" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Artboard Copy 12</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard-Copy-12" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="Week" font-family="TitilliumWeb-Regular, Titillium Web" font-size="18" font-weight="normal" letter-spacing="0.225" fill="#535759">
+            <tspan x="18" y="35">Week</tspan>
+        </text>
+        <text id="Month" font-family="TitilliumWeb-Regular, Titillium Web" font-size="18" font-weight="normal" letter-spacing="0.225" fill="#535759">
+            <tspan x="82" y="35">Month</tspan>
+        </text>
+        <text id="Year" font-family="TitilliumWeb-Regular, Titillium Web" font-size="18" font-weight="normal" letter-spacing="0.225" fill="#535759">
+            <tspan x="154" y="35">Year</tspan>
+        </text>
+        <line x1="18" y1="42" x2="62" y2="42" id="Path-2" stroke="#979797"></line>
+        <g id="Grouped-bar-chart" transform="translate(3.000000, 0.000000)">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="363" height="296"></rect>
+            <polygon id="Bar_1_1" fill="#9E81D3" points="2 296 2 139 10 139 10 296"></polygon>
+            <polygon id="Bar_1_2" fill="#9E81D3" points="15 296 15 133 23 133 23 296"></polygon>
+            <polygon id="Bar_1_3" fill="#9E81D3" points="28 296 28 17 36 17 36 296"></polygon>
+            <polygon id="Bar_1_4" fill="#9E81D3" points="41 296 41 2 49 2 49 296"></polygon>
+            <polygon id="Bar_1_5" fill="#9E81D3" points="54 296 54 50 62 50 62 296"></polygon>
+            <polygon id="Bar_1_6" fill="#9E81D3" points="67 296 67 74 75 74 75 296"></polygon>
+            <polygon id="Bar_1_7" fill="#9E81D3" points="80 296 80 26 88 26 88 296"></polygon>
+            <polygon id="Bar_1_8" fill="#9E81D3" points="93 296 93 53 101 53 101 296"></polygon>
+            <polygon id="Bar_1_9" fill="#9E81D3" points="106 296 106 145 114 145 114 296"></polygon>
+            <polygon id="Bar_1_10" fill="#9E81D3" points="119 296 119 29 127 29 127 296"></polygon>
+            <polygon id="Bar_1_11" fill="#9E81D3" points="132 296 132 94 140 94 140 296"></polygon>
+            <polygon id="Bar_1_12" fill="#9E81D3" points="145 296 145 100 152 100 152 296"></polygon>
+            <polygon id="Bar_1_13" fill="#9E81D3" points="158 296 158 127 165 127 165 296"></polygon>
+            <polygon id="Bar_1_14" fill="#9E81D3" points="171 296 171 118 178 118 178 296"></polygon>
+            <polygon id="Bar_1_15" fill="#9E81D3" points="184 296 184 91 191 91 191 296"></polygon>
+            <polygon id="Bar_1_16" fill="#9E81D3" points="197 296 197 94 204 94 204 296"></polygon>
+            <polygon id="Bar_1_17" fill="#9E81D3" points="210 296 210 91 217 91 217 296"></polygon>
+            <polygon id="Bar_1_18" fill="#9E81D3" points="222 296 222 85 230 85 230 296"></polygon>
+            <polygon id="Bar_1_19" fill="#9E81D3" points="235 296 235 91 243 91 243 296"></polygon>
+            <polygon id="Bar_1_20" fill="#9E81D3" points="248 296 248 17 256 17 256 296"></polygon>
+            <polygon id="Bar_1_21" fill="#9E81D3" points="261 296 261 8 269 8 269 296"></polygon>
+            <polygon id="Bar_1_22" fill="#9E81D3" points="274 296 274 59 282 59 282 296"></polygon>
+            <polygon id="Bar_1_23" fill="#9E81D3" points="287 296 287 2 295 2 295 296"></polygon>
+            <polygon id="Bar_1_24" fill="#9E81D3" points="300 296 300 53 308 53 308 296"></polygon>
+            <polygon id="Bar_1_25" fill="#9E81D3" points="313 296 313 35 321 35 321 296"></polygon>
+            <polygon id="Bar_1_26" fill="#9E81D3" points="326 296 326 130 334 130 334 296"></polygon>
+            <polygon id="Bar_1_27" fill="#9E81D3" points="339 296 339 79 347 79 347 296"></polygon>
+            <polygon id="Bar_1_28" fill="#9E81D3" points="352 296 352 53 360 53 360 296"></polygon>
+        </g>
+    </g>
+</svg>

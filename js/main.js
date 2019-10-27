@@ -3,7 +3,7 @@
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  var width = 2048; // We will scale the photo width to this
+  var width = 1024; // We will scale the photo width to this
   var height = 0; // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
@@ -83,8 +83,9 @@
         var img = takepicture();
         ev.preventDefault();
         postpicture(img);
-        return false;
-        // window.location.href = "scan-results.html";
+        //ev.preventDefault();
+        //window.location.href = "scan-results.html";
+        //return false;
       },
       false
     );
@@ -131,12 +132,10 @@
     var data = new FormData();
     data.append("image", img);
     request.send(data);
-    request.onreadystatechange = function() {
+    request.onload = function() {
       if (request.readyState == XMLHttpRequest.DONE) {
-        //alert(request.responseText);
-        window.location.href = `scan-results.html?token=${
-          JSON.parse(request.responseText).token
-        }`;
+        alert(request.responseText);
+        return false;
       }
     };
   }

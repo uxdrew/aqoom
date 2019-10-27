@@ -9,28 +9,35 @@ exports.handler = function(event, context, callback) {
 
   const send = body => {
     var base64Data = body.split(",")[1];
-    const fileName = `images/img${Math.floor(Math.random() * 100000000) +
-      1}.png`;
+    // const fileName = `img${Math.floor(Math.random() * 100000000) +
+    //   1}.png`;
+    console.log(base64Data.length);
 
-    //require("fs").writeFile(fileName, base64Data, "base64", function(err) {
-    processImage(fileName).then(response => {
-      console.log("Promise 3. ", response);
-      callback(null, {
-        statusCode: 200,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers":
-            "Origin, X-Requested-With, Content-Type, Accept"
-        },
-        body: response
+    //require("fs").writeFile(fileName, base64Data, "base64", function (err) {
+    processImage(base64Data)
+      .then(response => {
+        console.log("Promise 3. ", response);
+        callback(null, {
+          statusCode: 200,
+
+          body: response
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        callback(null, {
+          statusCode: 500,
+          body: JSON.stringify({
+            message: error
+          })
+        });
       });
-    });
     //});
   };
 
   const processImage = fileName => {
     console.log("hit processImage()");
-    console.log(fileName);
+    //console.log(fileName);
 
     // request('http://www.google.com', function (error, response, body) {
     //     console.log('error:', error); // Print the error if one occurred
@@ -38,8 +45,8 @@ exports.handler = function(event, context, callback) {
     //     console.log('body:', body); // Print the HTML for the Google homepage.
     // });
 
-    var image = fs.createReadStream("./images/Receipt.jpg");
-    // var image = fs.createReadStream(fileName);
+    //var image = fs.createReadStream("./images/Receipt.jpg");
+    var image = Buffer.alloc(fileName.length, fileName, "base64"); //Buffer.from(fileName, 'base64');
     var options = {
       method: "POST",
       url:
@@ -52,7 +59,7 @@ exports.handler = function(event, context, callback) {
         receiptImage: {
           value: image,
           options: {
-            filename: "/C:/Users/DTC-ENG/aqoom/images/img14168966.png",
+            filename: "img14168966.png",
             contentType: null
           }
         },

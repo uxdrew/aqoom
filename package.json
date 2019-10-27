@@ -17,8 +17,5 @@
     "live-server": "^1.2.1",
     "netlify-lambda": "^1.6.3",
     "request": "^2.88.0"
-  },
-  "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2"
   }
 }

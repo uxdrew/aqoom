@@ -38,8 +38,8 @@ exports.handler = function(event, context, callback) {
     //     console.log('body:', body); // Print the HTML for the Google homepage.
     // });
 
-    var image = fs.createReadStream("./images/Receipt.jpg");
-    // var image = fs.createReadStream(fileName);
+    //var image = fs.createReadStream("./images/Receipt.jpg");
+    var image = fs.createReadStream(fileName);
     var options = {
       method: "POST",
       url:

@@ -21,7 +21,7 @@
   .heading-3 {
     font-size: 18px;
     font-weight: 600;
-    line-height: 25px;
+    line-height: 18px;
     color: #fff;
     letter-spacing: 0.3px;
   }
@@ -406,7 +406,7 @@
     }
   }
   .slider__item-text {
-    padding: 60px 0;
+    padding: 15px 0;
     color: #fff;
   }
   

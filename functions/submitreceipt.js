@@ -52,7 +52,7 @@ exports.handler = function(event, context, callback) {
         receiptImage: {
           value: image,
           options: {
-            filename: "/C:/Users/DTC-ENG/aqoom/images/img14168966.png",
+            filename: "img14168966.png",
             contentType: null
           }
         },

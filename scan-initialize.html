@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>HealthyRewards</title>
+    <title>Aqoom - Healthy Rewards for healthy people.</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -17,17 +17,9 @@
 
         <!-- Header -->
         <header id="header" class="alt">
-            <span class="logo"> <a href="index.html"><img src="images/logo.svg"
-                        alt="HealthyRewards logo of pumpkin pimp" /></a></span>
-            <h1>Recipt Scan Results</h1>
+            <span class="logo"> <a href="index.html"><img src="images/logo.svg" alt="HealthyRewards logo of pumpkin pimp" /></a></span>
+            <h1>Image Scan Initialization</h1>
         </header>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li><a href="scan-initialize.html"><i class="fas fa-angle-left" style="color:#999"></i> Rescan Receipt</a></li>
-            </ul>
-        </nav>
 
         <!-- Main -->
         <div id="main">
@@ -37,44 +29,34 @@
                 <div class="spotlight">
                     <div class="content">
                         <header class="major">
-                            <h2>Scan Results</h2>
+                            <h2>Receipt Scanner</h2>
                         </header>
-                        <h4>Current</h4>
-                        <p align="right">Total: <span style="font-size: 24px;">5 pts</span></p>
-                        <table data-role="table" id="movie-table-custom" data-mode="reflow" class="movie-list table-stroke">
 
-                            <tr>
-                                <td align="left">nasty ass hot pocket<p style="font-size: 12px;">frozen food</p>
-                                </td>
-                                <td>FAIL</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
-                            <tr>
-                                <td align="left">organic apple<p style="font-size: 12px;">produce</p>
-                                </td>
-                                <td>PASS</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
-                            <tr>
-                                <td align="left">proten chips - sour cream and onion<p style="font-size: 12px;">keto</p>
-                                </td>
-                                <td>PASS</td>
-                                <td><i class="fas fa-angle-right"></i></td>
-                            </tr>
+                        <div id="capture" class="video"></div>
+                        <br>
+                        <ul class="actions special">
+                            <li><a href="index.html" class="button primary" id="post-image">Capture Image</a></li>
+                            <li><a href="scan-results.html" class="button" >Mock Scan Results</a></li>
 
-                        </table>
-
-                        <ul class="actions">
-                                <li><a href="#" class="button primary" id="">Accept</a></li>
-                                <li><a href="#" class="button primary" id="">Add points to loyalty card</a></li>
-
-                                                  </ul>
-
-
+                        </ul>
                     </div>
                 </div>
             </section>
 
+
+            <!-- Get Started -->
+            <section id="cta" class="main special">
+                <header class="major">
+                    <h2>Not sure where to start?</h2>
+                    <p>Don't worry. If you don't have a receipt ready to scan quite yet. Learn how it all works below. </p>
+                </header>
+                <footer class="major">
+                    <ul class="actions special">
+                        <li><a href="account-create.html" class="button primary">Create Account</a></li>
+                        <li><a href="learn-more.html" class="button">Learn More</a></li>
+                    </ul>
+                </footer>
+            </section>
 
         </div>
 
@@ -114,7 +96,10 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="js/main.js"></script> <!-- from arjun -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"
+        integrity="sha256-WVsM3xrcqyuFNF3W1qtIKbHFsD0977nDQA8DCMp1zCw=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"
+        integrity="sha256-2/3R3NV5zryj0fDjD3cDh+SNiWQ/TJiMVZzAo5FrhiU=" crossorigin="anonymous"></script>
 
 </body>
 

@@ -59,6 +59,11 @@ exports.handler = function (event, context, callback) {
                 receiptImage:
                 {
                     value: image,
+                    options:
+                    {
+                        filename: '/C:/Users/DTC-ENG/aqoom/images/img14168966.png',
+                        contentType: null
+                    }
                 },
                 testMode: 'true'
             }
@@ -75,6 +80,25 @@ exports.handler = function (event, context, callback) {
             }
             console.log("Success!!!")
             console.log(body);
+
+            getResult(body);
+        });
+    };
+
+    function getResult(body) {
+        console.log("hit getResult()");
+        var jsonBody = JSON.parse(body);
+        if (jsonBody.success == false) {
+            console.log("getresult() - failed POST");
+            return;
+        }
+
+        var token = jsonBody.token;
+
+        request('https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/' + token, function (error, response, body) {
+            console.log('error:', error); // Print the error if one occurred
+            console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+            console.log('body:', body); // Print the HTML for the Google homepage.
         });
     };
 

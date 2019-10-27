@@ -3671,7 +3671,7 @@ input, select, textarea {
 					padding: 2.5em 1em 0.5em 1em ;
 				}
 
-					#main > .main > .image.main:first-child {
+					#main > .main > .image.main:first-child 
 						margin: -2.5em 0 1.5em -1em;
 						width: calc(100% + 2em);
 						border-radius: 0;

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="284px" height="179px" viewBox="0 0 284 179" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Artboard Copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#A04443" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#A04443" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#A04443" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#A04443" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#A04443" offset="0%"></stop>
+            <stop stop-color="#D8D8D8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard-Copy-5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(11.000000, 8.000000)">
+            <rect id="Rectangle-Copy-11" fill="url(#linearGradient-1)" x="0" y="13" width="32" height="151"></rect>
+            <rect id="Rectangle-Copy-10" fill="url(#linearGradient-2)" x="46" y="45" width="32" height="119"></rect>
+            <rect id="Rectangle-Copy-9" fill="url(#linearGradient-3)" x="92" y="22" width="32" height="142"></rect>
+            <rect id="Rectangle-Copy-8" fill="url(#linearGradient-4)" x="138" y="94" width="32" height="70"></rect>
+            <rect id="Rectangle-Copy-7" fill="url(#linearGradient-5)" x="184" y="0" width="32" height="164"></rect>
+            <rect id="Rectangle-Copy-6" fill="url(#linearGradient-3)" x="230" y="22" width="32" height="142"></rect>
+        </g>
+    </g>
+</svg>

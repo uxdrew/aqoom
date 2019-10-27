@@ -3,7 +3,7 @@ var fs = require("fs");
 var request = require("request");
 
 // eslint-disable-next-line no-unused-vars
-exports.handler = function(event, context, callback) {
+exports.handler = function (event, context, callback) {
   let retval;
   console.log("hit handler");
 
@@ -12,18 +12,21 @@ exports.handler = function(event, context, callback) {
     const fileName = `images/img${Math.floor(Math.random() * 100000000) +
       1}.png`;
 
-    require("fs").writeFile(fileName, base64Data, "base64", function(err) {
+    require("fs").writeFile(fileName, base64Data, "base64", function (err) {
       processImage(fileName).then(response => {
         console.log("Promise 3. ", response);
         callback(null, {
           statusCode: 200,
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers":
-              "Origin, X-Requested-With, Content-Type, Accept"
-          },
+
           body: response
         });
+      }).catch(error => {
+        callback(null, {
+          statusCode: 500,
+          body: JSON.stringify({
+            message: error
+          })
+        })
       });
     });
   };
@@ -59,8 +62,8 @@ exports.handler = function(event, context, callback) {
         testMode: "true"
       }
     };
-    return new Promise(function(resolve, reject) {
-      request(options, function(error, response, body) {
+    return new Promise(function (resolve, reject) {
+      request(options, function (error, response, body) {
         console.log("hit request");
         if (error) {
           console.log("Error!!!");
@@ -88,12 +91,12 @@ exports.handler = function(event, context, callback) {
 
     var token = jsonBody.token;
 
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       console.log("Inside getResult");
       request(
         "https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/" +
-          token,
-        function(error, response, body) {
+        token,
+        function (error, response, body) {
           retval = body;
           resolve(body);
           console.log("Resolved 1. ", body);

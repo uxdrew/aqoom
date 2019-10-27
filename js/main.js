@@ -84,7 +84,8 @@
         var img = takepicture();
         postpicture(img);
         //ev.preventDefault();
-        //window.location.href = "scan-results.html";
+        setTimeout(function(){window.location.href = "scan-results.html";}, 2000);
+        
         //return false;
       },
       false

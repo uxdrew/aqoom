@@ -80,10 +80,11 @@
     postbutton.addEventListener(
       "click",
       function(ev) {
+        ev.preventDefault();
         var img = takepicture();
         postpicture(img);
-        ev.preventDefault();
-        window.location.href = "scan-results.html";
+
+        // window.location.href = "scan-results.html";
       },
       false
     );

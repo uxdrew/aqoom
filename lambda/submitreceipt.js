@@ -36901,6 +36901,7 @@ var request = __webpack_require__(/*! request */ "../node_modules/request/index.
 
 
 exports.handler = function (event, context, callback) {
+  let retval;
   console.log("hit handler");
 
   const send = body => {
@@ -36908,17 +36909,17 @@ exports.handler = function (event, context, callback) {
     const fileName = `images/img${Math.floor(Math.random() * 100000000) + 1}.png`;
 
     __webpack_require__(/*! fs */ "fs").writeFile(fileName, base64Data, "base64", function (err) {
-      processImage(fileName);
-      console.log(err);
-    });
-
-    callback(null, {
-      statusCode: 200,
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
-      },
-      body: body
+      processImage(fileName).then(response => {
+        console.log("Promise 3. ", response);
+        callback(null, {
+          statusCode: 200,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+          },
+          body: response
+        });
+      });
     });
   };
 
@@ -36930,7 +36931,7 @@ exports.handler = function (event, context, callback) {
     //     console.log('body:', body); // Print the HTML for the Google homepage.
     // });
 
-    var image = fs.createReadStream("C:/Users/DTC-ENG/aqoom/images/img10512229.png"); // var image = fs.createReadStream(fileName);
+    var image = fs.createReadStream("./images/Receipt.jpg"); // var image = fs.createReadStream(fileName);
 
     var options = {
       method: "POST",
@@ -36949,24 +36950,30 @@ exports.handler = function (event, context, callback) {
         testMode: "true"
       }
     };
-    request(options, function (error, response, body) {
-      console.log("hit request");
+    return new Promise(function (resolve, reject) {
+      request(options, function (error, response, body) {
+        console.log("hit request");
 
-      if (error) {
-        console.log("Error!!!");
-        console.log(error);
-        throw new Error(error);
-      }
+        if (error) {
+          console.log("Error!!!");
+          console.log(error);
+          throw new Error(error);
+        }
 
-      console.log("Success!!!");
-      console.log(body);
-      getResult(body);
+        getResult(body).then(response => {
+          resolve(response);
+          console.log("Resolve 2");
+          console.log(response);
+        });
+        console.log("Success!!!");
+        console.log(body);
+      });
     });
   };
 
-  function getResult(body) {
+  const getResult = postBody => {
     console.log("hit getResult()");
-    var jsonBody = JSON.parse(body);
+    var jsonBody = JSON.parse(postBody);
 
     if (jsonBody.success == false) {
       console.log("getresult() - failed POST");
@@ -36974,14 +36981,15 @@ exports.handler = function (event, context, callback) {
     }
 
     var token = jsonBody.token;
-    request("https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/" + token, function (error, response, body) {
-      console.log("error:", error); // Print the error if one occurred
-
-      console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
-
-      console.log("body:", body); // Print the HTML for the Google homepage.
+    return new Promise(function (resolve, reject) {
+      console.log("Inside getResult");
+      request("https://api.tabscanner.com/NbXvvebY6P6sbfWX0ZcsbLm7tAqde9CGZAZ84JKa6FyqCs9EJpUScTGzfcOetvlw/result/" + token, function (error, response, body) {
+        retval = body;
+        resolve(body);
+        console.log("Resolved 1. ", body);
+      });
     });
-  }
+  };
 
   send(event.body);
 };

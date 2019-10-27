@@ -28,7 +28,7 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
- */var r=t(123);a.getPublicSuffix=function(e){return r.get(e)}},function(e,a){e.exports=require("punycode")},function(e,a,t){"use strict";
+ */var r=t(85);a.getPublicSuffix=function(e){return r.get(e)}},function(e,a){e.exports=require("punycode")},function(e,a,t){"use strict";
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.

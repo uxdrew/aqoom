@@ -44,28 +44,28 @@
         console.error(error);
       });
 
-    video.addEventListener(
-      "canplay",
-      function(ev) {
-        if (!streaming) {
-          height = video.videoHeight / (video.videoWidth / width);
+    // video.addEventListener(
+    //   "canplay",
+    //   function(ev) {
+    //     if (!streaming) {
+    //       height = video.videoHeight / (video.videoWidth / width);
 
-          // Firefox currently has a bug where the height can't be read from
-          // the video, so we will make assumptions if this happens.
+    //       // Firefox currently has a bug where the height can't be read from
+    //       // the video, so we will make assumptions if this happens.
 
-          if (isNaN(height)) {
-            height = width / (4 / 3);
-          }
+    //       if (isNaN(height)) {
+    //         height = width / (4 / 3);
+    //       }
 
-          video.setAttribute("width", width);
-          video.setAttribute("height", height);
-          canvas.setAttribute("width", width);
-          canvas.setAttribute("height", height);
-          streaming = true;
-        }
-      },
-      false
-    );
+    //       video.setAttribute("width", width);
+    //       video.setAttribute("height", height);
+    //       canvas.setAttribute("width", width);
+    //       canvas.setAttribute("height", height);
+    //       streaming = true;
+    //     }
+    //   },
+    //   false
+    // );
 
     // previewbutton.addEventListener(
     //   "click",
@@ -80,8 +80,8 @@
     postbutton.addEventListener(
       "click",
       function(ev) {
-        ev.preventDefault();
         var img = takepicture();
+        ev.preventDefault();
         postpicture(img);
         //ev.preventDefault();
         setTimeout(function(){window.location.href = "scan-results.html";}, 2000);
@@ -128,8 +128,8 @@
 
   function postpicture(img) {
     var request = new XMLHttpRequest();
-    //request.open("POST", "http://localhost:9000/submitreceipt", true);
-    request.open("POST", "/.netlify/functions/submitreceipt", true);
+    request.open("POST", "http://localhost:9000/submitreceipt", true);
+    // request.open("POST", "/.netlify/functions/submitreceipt", true);
     var data = new FormData();
     data.append("image", img);
     request.send(data);

@@ -7,8 +7,8 @@
 
   function getData(token) {
     var request = new XMLHttpRequest();
-    request.open("GET", "http://localhost:9000/getReceiptInfo", true);
-    // request.open("POST", "/.netlify/functions/submitreceipt", true);
+    //request.open("GET", "http://localhost:9000/getReceiptInfo", true);
+    request.open("POST", "/.netlify/functions/getReceiptInfo", true);
     request.send();
     request.onreadystatechange = function() {
       if (request.readyState == XMLHttpRequest.DONE) {

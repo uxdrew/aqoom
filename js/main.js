@@ -126,8 +126,8 @@
 
   function postpicture(img) {
     var request = new XMLHttpRequest();
-    request.open("POST", "http://localhost:9000/submitreceipt", true);
-    //request.open("POST", "/.netlify/functions/submitreceipt", true);
+    //request.open("POST", "http://localhost:9000/submitreceipt", true);
+    request.open("POST", "/.netlify/functions/submitreceipt", true);
     var data = new FormData();
     data.append("image", img);
     request.send(data);

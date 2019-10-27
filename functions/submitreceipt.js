@@ -9,8 +9,9 @@ exports.handler = function (event, context, callback) {
 
   const send = body => {
     var base64Data = body.split(",")[1];
-    const fileName = `img${Math.floor(Math.random() * 100000000) +
-      1}.png`;
+    // const fileName = `img${Math.floor(Math.random() * 100000000) +
+    //   1}.png`;
+    console.log(base64Data.length);
 
     //require("fs").writeFile(fileName, base64Data, "base64", function (err) {
       processImage(base64Data).then(response => {

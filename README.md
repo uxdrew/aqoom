@@ -18,8 +18,8 @@ https://hlth.com/hack-hlth/ - Working repo for Arjun, Alec, and Andrew during 20
 </div>
 
 <div class="row">
-<img src="https://github.com/uxdrew/aqoom/blob/design/images/_dashboard.PNG" width="32%" hspace="3">
-<img src="https://github.com/uxdrew/aqoom/blob/design/images/_dashboard.PNG" width="32%" hspace="3">
-<img src="https://github.com/uxdrew/aqoom/blob/design/images/_home.PNG" width="32%" hspace="3">
+<img src="https://github.com/uxdrew/aqoom/blob/design/images/_scan-init.PNG" width="32%" hspace="3">
+<img src="https://github.com/uxdrew/aqoom/blob/design/images/_scan-results.PNG" width="32%" hspace="3">
+<img src="https://github.com/uxdrew/aqoom/blob/design/images/_receipt-listview.PNG" width="32%" hspace="3">
 </div>
 

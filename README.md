@@ -1,18 +1,12 @@
 # aqoom
-### accumulate more happiness by healthy living
-##### a healthy rewards program
 
 <div class="container">
 <div class="row">
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_logo.png" width="48%" hspace="3">
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_site%20flow%402x.png" width="100%" hspace="3">
-
-  
-
 </div>
 </div>
-
-
+#
 <div class="row">
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_home.PNG" width="32%" hspace="3">
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_dashboard.PNG" width="32%" hspace="3">
@@ -24,4 +18,8 @@
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_scan-results.PNG" width="32%" hspace="3">
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_receipt-listview.PNG" width="32%" hspace="3">
 </div>
-
+#
+## Pre-requisites 
+## Overview
+## Calling the API 
+## Next Steps 

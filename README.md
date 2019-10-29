@@ -18,7 +18,7 @@
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_scan-results.PNG" width="32%" hspace="3">
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_receipt-listview.PNG" width="32%" hspace="3">
 </div>
-#
+# ...
 ## Pre-requisites 
 ## Overview
 ## Calling the API 

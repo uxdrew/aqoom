@@ -2,7 +2,7 @@
 https://hlth.com/hack-hlth/ - Working repo for Arjun, Alec, and Andrew during 2019 hackathon 
 
 <div class="row">
-<img align="middle" src="https://github.com/uxdrew/aqoom/blob/design/images/_logo.png" width="50%" alt="brand">
+<img src="https://github.com/uxdrew/aqoom/blob/design/images/_logo.png" width="48%" hspace="3">
 </div>
 
 <div class="row">

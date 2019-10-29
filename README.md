@@ -1,7 +1,7 @@
 # aqoom
 ### accumulate more happiness by healthy living
 ##### a healthy rewards program
-https://hlth.com/hack-hlth/ - Working repo for Arjun, Alec, and Andrew during 2019 hackathon 
+
 <div class="container">
 <div class="row">
 <img src="https://github.com/uxdrew/aqoom/blob/design/images/_logo.png" width="48%" hspace="3">

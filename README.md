@@ -1,4 +1,4 @@
-# aqoom
+# aqoom - HealthyRewards - accumulate more happiness by healthy living
 https://hlth.com/hack-hlth/ - Working repo for Arjun, Alec, and Andrew during 2019 hackathon 
 <div class="container">
 <div class="row">

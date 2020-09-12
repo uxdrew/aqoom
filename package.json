@@ -17,7 +17,7 @@
     "fs": "^0.0.1-security",
     "live-server": "^1.2.1",
     "netlify-lambda": "^1.6.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "static-server": "^2.2.1"
